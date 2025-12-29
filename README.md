@@ -123,11 +123,8 @@ Secrets are **never committed**.
 
 ### Protected using:
 - `.gitignore`
-- `.env.example` for reference
 
 ---
-
-## 🚀 How to Run (High Level)
 
 ## 🚀 How to Run the Project (Step-by-Step)
 
@@ -209,24 +206,17 @@ Password: admin
 
 3️⃣ Run the Airflow DAG
 
-Open Airflow UI
+-> Open Airflow UI
 
-Enable the DAG:
+DAG Name: ecommerce_bronze_silver_gold_pipeline
 
-ecommerce_bronze_silver_gold_pipeline
+-> Trigger the DAG manually
 
-
-Trigger the DAG manually
-
-What the DAG does:
-
-Runs Bronze Glue Crawler
-
-Creates Silver table (Athena CTAS)
-
-Runs Silver Glue Crawler
-
-Creates Gold aggregate tables
+### What the DAG does:
+1 Runs Bronze Glue Crawler
+2 Creates Silver table (Athena CTAS)
+3 Runs Silver Glue Crawler
+4 Creates Gold aggregate tables
 
 Verify in AWS:
 
@@ -250,13 +240,9 @@ http://localhost:3000
 
 During Metabase setup:
 
-Database: Amazon Athena
-
-Region: eu-north-1
-
-S3 Staging Directory:
-
-s3://athena-query-results-nithinraaj-eu-north-1/
+- Database: Amazon Athena
+- Region: eu-north-1
+- S3 Staging Directory: <Path to your S3 Bucket >
 
 
 Workgroup: primary
@@ -264,25 +250,10 @@ Workgroup: primary
 Authentication: Use environment variables (already provided via .env)
 
 After connection:
-
-Sync schema
-
-Select ecommerce_gold tables
+-> Select ecommerce_gold tables
 
 6️⃣ View Dashboards
-
-Once connected:
-
 http://localhost:3000/dashboard
-
-
-You will see:
-
-Orders Daily Summary
-
-Payments Summary
-
-User Activity Metrics
 
 ✅ Final Result
 
@@ -292,26 +263,15 @@ User Activity Metrics
 ✔ Serverless analytics with Athena
 ✔ BI dashboards using Metabase
 
-⚠️ Important Notes
-
-Never commit .env files
-
-Stop services when not in use to avoid AWS cost
-
-Glue Crawlers are deferrable to prevent duplicate runs
-
 🧠 Resume Value
 
 This project demonstrates:
 
-Real-world data lake architecture
-
-Production-style orchestration
-
-Cost-aware AWS usage
-
-End-to-end ownership (ingest → BI)
-
+- Real-world data lake architecture
+- Production-style orchestration
+- Cost-aware AWS usage
+- End-to-end ownership (ingest → BI)
+  
 ---
 
 ## 💡 Why This Architecture?
