@@ -1,0 +1,19 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: datalake-consumer-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+aws:
+  region: eu-north-1
+  s3:
+    bucket: ecommerce-event-bronze
+
+logging:
+  level:
+    root: INFO
+    org.apache.kafka: ERROR
+    org.springframework.kafka: ERROR

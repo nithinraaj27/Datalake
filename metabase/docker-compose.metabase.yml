@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  metabase:
+    image: metabase/metabase:v0.48.6
+    container_name: metabase
+    restart: always
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - metabase_data:/metabase-data
+    dns:
+      - 8.8.8.8
+      - 1.1.1.1
+
+volumes:
+  metabase_data:

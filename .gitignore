@@ -1,0 +1,84 @@
+# ========================
+# Secrets & Environment
+# ========================
+.env
+.env.*
+!.env.example
+
+# ========================
+# AWS
+# ========================
+.aws/
+aws_credentials
+aws_config
+
+# ========================
+# Docker
+# ========================
+**/data/
+**/logs/
+**/tmp/
+docker-data/
+docker-volumes/
+
+# ========================
+# Airflow
+# ========================
+airflow/logs/
+airflow/plugins/__pycache__/
+airflow/dags/__pycache__/
+airflow/webserver_config.py
+airflow.db
+airflow.cfg
+
+# ========================
+# Python
+# ========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# ========================
+# Java / Spring Boot
+# ========================
+target/
+*.log
+*.class
+*.jar
+*.war
+*.ear
+.idea/
+*.iml
+
+# ========================
+# Node / Frontend (if any)
+# ========================
+node_modules/
+dist/
+build/
+
+# ========================
+# BI Tools
+# ========================
+superset.db
+superset_config.py
+metabase.db
+metabase-data/
+
+# ========================
+# OS / Editor
+# ========================
+.DS_Store
+Thumbs.db
+.vscode/
+.history/
+
+# ========================
+# Git
+# ========================
+*.orig
+*.rej
