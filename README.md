@@ -161,6 +161,8 @@ This will start:
 
 Zookeeper, Kafka, Python Kafka Producer, Spring Boot Kafka Consumer
 
+<img width="1352" height="242" alt="image" src="https://github.com/user-attachments/assets/be998121-f7c7-4690-9872-5b3ce1c4307e" />
+
 Verify logs:
 ```
 docker logs -f python-producer
@@ -196,6 +198,9 @@ docker compose -f docker-compose.airflow.yml run --rm airflow-webserver airflow 
   --email admin@example.com
 ```
 
+<img width="1771" height="1045" alt="image" src="https://github.com/user-attachments/assets/559e3806-a1d7-42ec-a0d6-5a44fee98786" />
+
+
 Open Airflow UI:
 http://localhost:8080/home
 
@@ -203,6 +208,8 @@ Login with:
 
 Username: admin
 Password: admin
+
+<img width="1920" height="482" alt="image" src="https://github.com/user-attachments/assets/f635ce55-988e-41bf-ae7d-cb4756c8987d" />
 
 3️⃣ Run the Airflow DAG
 
@@ -217,6 +224,9 @@ DAG Name: ecommerce_bronze_silver_gold_pipeline
 2 Creates Silver table (Athena CTAS)
 3 Runs Silver Glue Crawler
 4 Creates Gold aggregate tables
+
+<img width="1918" height="996" alt="image" src="https://github.com/user-attachments/assets/5163f4ff-49a9-477c-8ac4-95afd8b895a2" />
+
 
 Verify in AWS:
 
@@ -254,6 +264,9 @@ After connection:
 
 6️⃣ View Dashboards
 http://localhost:3000/dashboard
+
+<img width="1919" height="1042" alt="image" src="https://github.com/user-attachments/assets/4e37981f-39ba-4233-b09d-1930312cbed8" />
+
 
 ✅ Final Result
 
