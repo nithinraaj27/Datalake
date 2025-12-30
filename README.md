@@ -3,7 +3,7 @@
 An end-to-end **event-driven data lake and analytics system** built using **Kafka, Spring Boot, AWS S3, Glue, Athena, Airflow, and Metabase**.  
 This project demonstrates a **production-style Bronze → Silver → Gold architecture** with orchestration, schema evolution, and BI dashboards.
 
-Wath this video to Know more about project and Getting Started with the project 
+Watch this video to Know more about project and Getting Started with the project 
 
 Youtube Link: https://www.youtube.com/watch?v=Gyit3aMqqow
 ---
